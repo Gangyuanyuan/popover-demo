@@ -1,0 +1,48 @@
+body{
+	text-align: center;
+}
+.wrapper{
+	position: relative;
+	display: inline-block;
+	margin-top: 100px;
+}
+.popover{
+	border: 1px solid red;
+	background: white;
+	position: absolute;
+	top: 0;
+	left: 100%;
+	white-space: nowrap; /* 浮层文字在一行上 */
+	padding: 10px;
+	margin-left: 12px;
+	display: none;
+}
+.popover::before{
+	position: absolute; /* 位置相对于 popover */
+	top: 2px;
+	right: 100%;
+	border: 10px solid transparent;
+	border-right-color: red;
+	content: '';
+}
+.popover::after{
+	position: absolute;
+	top: 2px;
+	right: 100%;
+	border: 10px solid transparent;
+	border-right-color: white;
+	content: '';
+	margin-right: -1px;
+}
+ul{
+	margin: 0;
+	padding: 0;
+}
+ul > li{
+	list-style-type: none;
+}
+.show{
+	display: block;
+}
+
+
